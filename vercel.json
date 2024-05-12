@@ -7,5 +7,6 @@
           "x-force-static": "1"
         }
       }
-    ]
+    ],
+    "nodeVersion": "20.11.0"
   }
