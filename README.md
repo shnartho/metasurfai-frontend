@@ -1,24 +1,15 @@
-<<<<<<< HEAD
 npm install
 npm build
 npm run build
 npm run dev
 
-
-
-for docker
----------------
-
+for docker,
 docker build -t lp .   
-
 docker run -p 3000:3000 lp
 
-
-or
-
+or,
 docker-compose up
 
-=======
 # 🪙 Decentralized Advertisement Platform 🚀
 
 ## Overview

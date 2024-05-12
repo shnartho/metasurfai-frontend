@@ -1,0 +1,27 @@
+# Node modules
+node_modules
+
+# Next.js build files
+.next/
+
+# Environment variables
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Cache directories
+.cache/
+out/
+
+# IDE files (such as Visual Studio Code)
+.vscode/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories
+.idea/
+
