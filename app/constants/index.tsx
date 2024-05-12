@@ -1,0 +1,93 @@
+export const exploreWorlds = [
+  {
+    id: "world-1",
+    imgUrl: "/planet-01.png",
+    title: "Diverse Ad Posting",
+  },
+  {
+    id: "world-2",
+    imgUrl: "/planet-02.png",
+    title: "Crypto Rewards & Reinvestment",
+  },
+  {
+    id: "world-3",
+    imgUrl: "/planet-03.png",
+    title: "Crypto Trading Options",
+  },
+  {
+    id: "world-4",
+    imgUrl: "/planet-04.png",
+    title: "Exchange Listing (Binance, Coinbase)",
+  },
+  {
+    id: "world-5",
+    imgUrl: "/planet-05.png",
+    title: "Continuous Expansion & Integration",
+  },
+];
+
+export const startingFeatures = [
+  "Select the 'LAUNCH APP' button",
+  "Watch an advertisement to receive MetaSurfAI cryptocurrency as a reward",
+  "Exchange, store, or utilize the cryptocurrency to promote your own advertisement"
+];
+
+export const newFeatures = [
+  {
+    imgUrl: "/vrpano.svg",
+    title: "Advertise Anonymously",
+    subtitle:
+      "Advertise anything anonymously with no restrictions, terms, credit card, or debit card requirements on a fully decentralized platform",
+  },
+  {
+    imgUrl: "/headset.svg",
+    title: "Decentralized Platform",
+    subtitle:
+      "Ensuring robust user engagement with advertisements through a fully dedicated decentralized advertising platform",
+  },
+];
+
+export const insights = [
+  {
+    imgUrl: "/planet-08.png",
+    title: "The Billion-Dollar Click: Inside the Lucrative World of Online Advertising",
+    subtitle:
+      "Unmask the secrets behind online advertising's billion-dollar magic. See how Google, AWS, and other tech giants leverage ads to dominate their markets. Explore real data, industry trends, and the future of this multi-faceted revenue stream.",
+  },
+  {
+    imgUrl: "/planet-06.png",
+    title: "Google's Ad Empire: Beyond Search, A Multi-Billion Dollar Powerhouse",
+    subtitle:
+      "Google's revenue rockets past $230 billion, driven by its vast ad network. We analyze how its reach extends beyond search, impacting tech giants like AWS and shaping the online landscape.",
+  },
+  {
+    imgUrl: "/planet-07.png",
+    title: "Google Makes $230 Billion Off YouTube Ads",
+    subtitle:
+      "Every view, like, and comment contributes. Explore the massive advertising machine hidden within your favorite videos and its billion-dollar impact.",
+  },
+];
+
+export const socials = [
+  {
+    url: "/facebook.svg",
+    link: 'https://www.facebook.com',
+    name: 'Facebook',
+  },
+  {
+    url: "/twitter.svg",
+    link: 'https://x.com',
+    name: 'Twitter',
+  }, {
+    url: "/instagram.svg",
+    link: 'https://www.instagram.com',
+    name: 'Instagram',
+  },
+
+  {
+    url: "/linkedin.svg",
+    link: "https://www.linkedin.com/company/metasurfai",
+    name: 'Linkedin',
+  },
+];
+

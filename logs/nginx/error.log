@@ -1,0 +1,4 @@
+2024/03/10 00:27:26 [emerg] 9#9: open() "/run/nginx/nginx.pid" failed (13: Permission denied)
+2024/03/10 00:37:59 [emerg] 9#9: open() "/run/nginx/nginx.pid" failed (13: Permission denied)
+2024/03/10 01:59:47 [emerg] 8#8: "server" directive is not allowed here in /etc/nginx/nginx.conf:6
+2024/03/10 08:17:36 [emerg] 8#8: unknown "proxy_add_x_forwarded_proto" variable
