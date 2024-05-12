@@ -1,15 +1,3 @@
-npm install
-npm build
-npm run build
-npm run dev
-
-for docker,
-docker build -t lp .   
-docker run -p 3000:3000 lp
-
-or,
-docker-compose up
-
 # 🪙 Decentralized Advertisement Platform 🚀
 
 ## Overview
@@ -46,14 +34,17 @@ The Back-End showcases my proficiency in building and maintaining the core funct
 
 **Tech Stack:**
 
-* Go (Golang): High-performance server-side programming. ⚡️
-* PostgreSQL: Database management for storing advertisement data. 💾
-* REST API: Implementing secure and efficient communication. 🔒
-* Docker: Containerization for streamlined deployment. 🚢
+* Go (Golang) + Rust: Distributed High-performance server-side programming. ⚡️
+* PostgreSQL + Redis: Database management for storing advertisement data. 💾
+* REST API + gRPC: Implementing secure and efficient communication. 🔒
+* Docker + Kubernetes: Containerization for streamlined deployment. 🚢
 
 <p align="left"> 
-  <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> 
+  <a href="https://go.dev/" target="_blank" rel="noreferrer"> 
     <img src="https://raw.githubusercontent.com/rfyiamcool/golang_logo/master/svg/golang_3.svg" alt="git" width="55" height="45"/> 
+  </a>
+  <a href="https://rust-lang.com/" target="_blank" rel="noreferrer"> 
+    <img src="https://rustacean.net/assets/rustacean-orig-noshadow.svg" alt="git" width="55" height="45"/> 
   </a>
     <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> 
     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="git" width="40" height="40"/> 
@@ -120,4 +111,3 @@ If you have any questions or would like to learn more, please don't hesitate to 
 
 ![banner](./images/banner.png)
 #### ©️ Co-Founder: ©️Md Shahadat Hossen Nayem ©️Jemal Samba
->>>>>>> 27e96776a201f8bab19837cff1b267cc2808bd50

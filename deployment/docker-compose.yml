@@ -6,9 +6,9 @@ services:
     container_name: nginx_nodejs
     restart: always
     ports:
-      - "80:80"  # Expose NGINX on port 80
+      - "80:80"  
       - "443:443"
     volumes:
-      - ./app:/app  # Mount the local app directory into the container
+      - ./app:/app  
     environment:
       NODE_ENV: production
