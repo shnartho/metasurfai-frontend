@@ -36,6 +36,7 @@ The Back-End showcases my proficiency in building and maintaining the core funct
 
 * Go (Golang) + Rust: Distributed High-performance server-side programming. ⚡️
 * PostgreSQL + Redis: Database management for storing advertisement data. 💾
+* Kafka : Message Queue. 📢
 * REST API + gRPC: Implementing secure and efficient communication. 🔒
 * Docker + Kubernetes: Containerization for streamlined deployment. 🚢
 
