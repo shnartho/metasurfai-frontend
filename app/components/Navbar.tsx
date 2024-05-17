@@ -3,10 +3,15 @@ import React, { useState } from 'react';
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { navVariants } from "../utils/motion";
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 
 const Navbar = () => {
-
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState('');
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedValue = event.target.value;
@@ -30,7 +35,8 @@ const Navbar = () => {
       >
         <div className="absolute w-[50%] inset-0 gradient-01" />
         <div className="innerWidth mx-auto flex justify-between gap-8">
-          <div className="relative">
+          {/* Desktop menu */}
+          <div className="desktop-menu relative">
             <select
               value={selectedOption}
               onChange={handleSelectChange}
@@ -61,36 +67,80 @@ const Navbar = () => {
             </div>
           </div>
 
-
           {/* 2nd element */}
-          <div className="flex items-center justify-center"> {/* Container for centering */}
+          <div className="flex items-center justify-center">
             <h2 className="font-extrabold text-[24px] leading-[30.24px] text-white">
               MetaSurfAI
             </h2>
           </div>
-          <button
-            type="button"
-            className="flex items-center h-fit py-4 px-6 bg-[#2561AB] rounded-[32px] gap-[12px]"
-            style={{
-              background: 'linear-gradient(to right, #f708a7, #d383f8)',
-              cursor: 'pointer'
-            }}
-            onClick={() => window.location.href = 'https://app.metasurfai.com'}
-          >
-            <Image
-              src="/headset.svg"
-              width={24}
-              height={24}
-              alt="headset"
-              className="object-contain"
-            />
-            <span className="font-normal text-[16px] text-white uppercase">
-              <a href="https://app.metasurfai.com" target="_blank" rel="noopener noreferrer" className="text-white">
-                Launch APP
-              </a>
-            </span>
-          </button>
+
+          {/* Desktop "Launch App" button */}
+          <div className="desktop-menu">
+            <button
+              type="button"
+              className="flex items-center h-fit py-4 px-6 bg-[#2561AB] rounded-[32px] gap-[12px]"
+              style={{
+                background: 'linear-gradient(to right, #f708a7, #d383f8)',
+                cursor: 'pointer'
+              }}
+              onClick={() => window.location.href = 'https://app.metasurfai.com'}
+            >
+              <Image
+                src="/headset.svg"
+                width={24}
+                height={24}
+                alt="headset"
+                className="object-contain"
+              />
+              <span className="font-normal text-[16px] text-white uppercase">
+                Launch App
+              </span>
+            </button>
+          </div>
+
+          {/* Mobile menu toggle button */}
+          <div className="mobile-menu">
+            <button
+              className="md:hidden"
+              onClick={toggleMenu}
+            >
+              {isMenuOpen ? (
+                <AiOutlineClose size={24} color="white" />
+              ) : (
+                <AiOutlineMenu size={24} color="white" />
+              )}
+            </button>
+          </div>
         </div>
+
+        {/* Mobile menu */}
+        {isMenuOpen && (
+          <div className="md:hidden bg-[#2561AB] py-4 px-6 space-y-4">
+            <a href="#about" className="block text-white hover:text-[#f708a7]">
+              Introduction
+            </a>
+            <a href="#explore" className="block text-white hover:text-[#f708a7]">
+              Roadmap
+            </a>
+            <a href="#whatsnew" className="block text-white hover:text-[#f708a7]">
+              What&#39;s New
+            </a>
+            <a href="#insight" className="block text-white hover:text-[#f708a7]">
+              Insight
+            </a>
+            <a href="#getstarted" className="block text-white hover:text-[#f708a7]">
+              Get Started
+            </a>
+            <a
+              href="https://app.metasurfai.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block text-white hover:text-[#f708a7]"
+            >
+              Launch App
+            </a>
+          </div>
+        )}
       </motion.nav>
     </header>
   )
