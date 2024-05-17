@@ -18,26 +18,22 @@ html {
 }
 
 .gradient-01 {
-  background-image: linear-gradient(
-    270deg,
-    hsl(295deg 76% 51%) 0%,
-    hsl(284deg 70% 73%) 26%,
-    hsl(257deg 70% 86%) 39%,
-    hsl(202deg 92% 90%) 50%,
-    hsl(215deg 77% 81%) 61%,
-    hsl(221deg 73% 70%) 74%,
-    hsl(220deg 76% 51%) 100%
-  );
+  background-image: linear-gradient(270deg,
+      hsl(295deg 76% 51%) 0%,
+      hsl(284deg 70% 73%) 26%,
+      hsl(257deg 70% 86%) 39%,
+      hsl(202deg 92% 90%) 50%,
+      hsl(215deg 77% 81%) 61%,
+      hsl(221deg 73% 70%) 74%,
+      hsl(220deg 76% 51%) 100%);
   filter: blur(125px);
 }
 
 .hero-gradient {
-  background: linear-gradient(
-    97.86deg,
-    #a509ff 0%,
-    #34acc7 53.65%,
-    #a134c7 100%
-  );
+  background: linear-gradient(97.86deg,
+      #a509ff 0%,
+      #34acc7 53.65%,
+      #a134c7 100%);
 }
 
 .gradient-02 {
@@ -84,11 +80,9 @@ html {
 }
 
 .gradient-05 {
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.04) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.04) 0%,
+      rgba(255, 255, 255, 0) 100%);
 }
 
 .feedback-gradient {
@@ -114,76 +108,101 @@ html {
 }
 
 @layer utilities {
+
   /* STYLES */
   .innerWidth {
     @apply 2xl:max-w-[1280px] w-full;
   }
+
   .interWidth {
     @apply lg:w-[80%] w-full;
   }
+
   .paddings {
     @apply sm:p-16 xs:p-8 px-6 py-12;
   }
+
   .yPaddings {
     @apply sm:py-16 xs:py-8 py-12;
   }
+
   .xPaddings {
     @apply sm:px-16 px-6;
   }
+
   .topPaddings {
     @apply sm:pt-16 xs:pt-8 pt-12;
   }
+
   .bottomPaddings {
     @apply sm:pb-16 xs:pb-8 pb-12;
   }
+
   .flexCenter {
     @apply flex justify-center items-center;
   }
+
   .flexStart {
     @apply flex justify-start items-start;
   }
+
   .flexEnd {
     @apply flex justify-end;
   }
+
   .navPadding {
     @apply pt-[98px];
   }
-  /* Hero Section */
-  /* .heroHeading {
-    @apply font-bold lg:text-[35px] md:text-[100px] sm:text-[60px] text-[44px] lg:leading-[158.4px] md:leading-[114.4px] sm:leading-[74.4px] leading-[64.4px] uppercase text-white;
-  } */
 
+  /* Hero Section */
   .heroHeading {
-    font-weight: 1000;
+    font-weight: 900;
     text-transform: uppercase;
-    color: rgb(53, 0, 128);
+    color: #2b1055;
     line-height: 1.25;
-    font-family: 'Roboto Black', sans-serif; /* You can adjust the line-height as needed */
+    font-family: 'Roboto Black', sans-serif;
   }
-  
+
   .gradient-text {
-    background: linear-gradient(to right, #f708a7, #d383f8); /* Example gradient colors */
+    background: linear-gradient(to right, #f708a7, #d383f8);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  
-  /* Define specific text sizes for different screen sizes */
-  @media (min-width: 1024px) { /* Large screens */
+
+  /* Responsive Styles */
+  @media (min-width: 1024px) {
     .heroHeading {
       font-size: 95px;
       line-height: 90.4px;
     }
   }
-  @media (max-width: 1023px) and (min-width: 768px) { /* Medium screens */
+
+  @media (max-width: 1023px) {
     .heroHeading {
-      font-size: 100px;
-      line-height: 114.4px;
+      font-size: 80px;
+      line-height: 90.4px;
     }
   }
-  @media (max-width: 767px) { /* Small screens */
+
+  @media (max-width: 767px) {
     .heroHeading {
       font-size: 60px;
       line-height: 74.4px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .heroHeading {
+      font-size: 40px;
+      line-height: 58.4px;
+    }
+  }
+
+  @media (max-width: 370px) {
+    .heroHeading {
+      font-size: 30px;
+      line-height: 38.4px;
     }
   }
 
@@ -195,7 +214,52 @@ html {
 .option {
   color: #fdfcfc;
   background: #8e039b;
-  /* background-color: linear-gradient(to right, #f708a7, #d383f8); */
   transition: background-color 0.3s;
 }
 
+
+
+/* Hide the mobile menu by default */
+.mobile-menu {
+  display: none;
+}
+
+/* Show the mobile menu when the screen width is less than 768px */
+@media (max-width: 767px) {
+  .mobile-menu {
+    display: block;
+  }
+
+  .desktop-menu {
+    display: none;
+  }
+}
+
+/* Show the mobile menu when the aspect ratio is less than 16:9 */
+@media (max-aspect-ratio: 16/9) {
+  .mobile-menu {
+    display: block;
+  }
+
+  .desktop-menu {
+    display: none;
+  }
+}
+
+.mobile-menu .launch-app-link {
+  @apply bg-[#D773FF] opacity-80 text-white py-2 px-4 transition-all duration-300 rounded w-24 h-10 hover:bg-[#f708a7] font-sans;
+}
+
+@media (max-width: 1200px) {
+
+  .absolute.w-full.h-full,
+  .bg-\[rgba\(0\,0\,0\,0\.5\)\] {
+    display: none;
+  }
+
+  .font-normal.text-\[16px\].leading-\[20px\].text-white.uppercase,
+  .font-semibold.sm\:text-\[32px\].text-\[24px\].text-white {
+    display: none;
+  }
+
+}

@@ -70,24 +70,20 @@ export const insights = [
 
 export const socials = [
   {
-    url: "/facebook.svg",
-    link: 'https://www.facebook.com',
+    url: "/discord.svg",
+    link: 'https://discord.gg/jRaxffeJDn',
     name: 'Facebook',
   },
   {
     url: "/twitter.svg",
     link: 'https://x.com',
     name: 'Twitter',
-  }, {
-    url: "/instagram.svg",
-    link: 'https://www.instagram.com',
-    name: 'Instagram',
   },
-
   {
     url: "/linkedin.svg",
     link: "https://www.linkedin.com/company/metasurfai",
     name: 'Linkedin',
   },
 ];
+
 
