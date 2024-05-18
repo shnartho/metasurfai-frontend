@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { navVariants } from "../utils/motion";
-import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -105,9 +104,11 @@ const Navbar = () => {
               onClick={toggleMenu}
             >
               {isMenuOpen ? (
-                <AiOutlineClose size={24} color="white" />
+                <Image src='/MenuIco.svg' width={24}
+                  height={24} alt='icon' className="bg-white" />
               ) : (
-                <AiOutlineMenu size={24} color="white" />
+                <Image src='/MenuIco.svg' width={24}
+                  height={24} alt='icon' className="bg-white" />
               )}
             </button>
           </div>
